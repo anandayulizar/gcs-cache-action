@@ -149,7 +149,7 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const inputs = (0, inputs_1.getInputs)();
         const bucket = new storage_1.Storage().bucket(inputs.bucket);
-        const folderPrefix = `${github.context.repo.owner}/${github.context.repo.repo}`;
+        const folderPrefix = `${github.context.repo.owner}/${github.context.repo.repo}-test`;
         const exactFileName = `${folderPrefix}/${inputs.key}.tar`;
         const [bestMatch, bestMatchKind] = yield core.group('🔍 Searching the best cache archive available', () => getBestMatch(bucket, inputs.key, inputs.restoreKeys));
         core.debug(`Best match kind: ${bestMatchKind}.`);

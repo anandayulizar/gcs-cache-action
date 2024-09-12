@@ -84,7 +84,7 @@ async function main() {
   const inputs = getInputs();
   const bucket = new Storage().bucket(inputs.bucket);
 
-  const folderPrefix = `${github.context.repo.owner}/${github.context.repo.repo}`;
+  const folderPrefix = `${github.context.repo.owner}/${github.context.repo.repo}-test`;
   const exactFileName = `${folderPrefix}/${inputs.key}.tar`;
 
   const [bestMatch, bestMatchKind] = await core.group(
