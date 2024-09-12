@@ -14,7 +14,7 @@ async function getBestMatch(
   key: string,
   restoreKeys: string[],
 ): Promise<[File, Exclude<CacheHitKindState, 'none'>] | [null, 'none']> {
-  const folderPrefix = `${github.context.repo.owner}/${github.context.repo.repo}`;
+  const folderPrefix = `${github.context.repo.owner}/${github.context.repo.repo}-test`;
 
   core.debug(`Will lookup for the file ${folderPrefix}/${key}.tar`);
 

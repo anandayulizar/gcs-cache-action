@@ -98,7 +98,7 @@ const state_1 = __nccwpck_require__(9249);
 const tar_utils_1 = __nccwpck_require__(8429);
 function getBestMatch(bucket, key, restoreKeys) {
     return __awaiter(this, void 0, void 0, function* () {
-        const folderPrefix = `${github.context.repo.owner}/${github.context.repo.repo}`;
+        const folderPrefix = `${github.context.repo.owner}/${github.context.repo.repo}-test`;
         core.debug(`Will lookup for the file ${folderPrefix}/${key}.tar`);
         const exactFile = bucket.file(`${folderPrefix}/${key}.tar`);
         const [exactFileExists] = yield exactFile.exists().catch((err) => {
